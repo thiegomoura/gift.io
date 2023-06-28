@@ -1,0 +1,191 @@
+{
+	"info": {
+		"_postman_id": "05312117-01b3-4f13-839b-fb007cf5933c",
+		"name": "Gift.io",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28143552",
+		"_collection_link": "https://orange-star-723842.postman.co/workspace/Team-Workspace~89fa0cc9-f213-4514-8035-6959e6be58b8/collection/28143552-05312117-01b3-4f13-839b-fb007cf5933c?action=share&creator=28143552&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Create user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Th\",\r\n    \"lastName\": \"Moura\",\r\n    \"birthday\": \"2023-06-28T06:03:02.195Z\",\r\n    \"email\": \"thi-ego@hotmail.com\",\r\n    \"password\": \"teste\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}:{{port}}/user",
+							"host": [
+								"{{base_url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Gift",
+			"item": [
+				{
+					"name": "Create gift",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Test gift\",\r\n    \"description\": \"A simple gift\",\r\n    \"thumbnail\": \"My thumbnail\",\r\n    \"link\": \"Some link\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}:{{port}}/gift/e066e468-ed08-4f59-87cc-de7823a0cc37",
+							"host": [
+								"{{base_url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"gift",
+								"e066e468-ed08-4f59-87cc-de7823a0cc37"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get gift by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}:{{port}}/gift/dddfce9e-41d9-47d4-abda-89303fc15f24",
+							"host": [
+								"{{base_url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"gift",
+								"dddfce9e-41d9-47d4-abda-89303fc15f24"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get gift by userId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}:{{port}}/gift/user/2d507225-82b9-43c9-b807-67ee2a8ed673",
+							"host": [
+								"{{base_url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"gift",
+								"user",
+								"2d507225-82b9-43c9-b807-67ee2a8ed673"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update gift",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"New gift\",\r\n    \"description\": \"New description\",\r\n    \"thumbnail\": \"https://site.com/thumbnail.png\",\r\n    \"link\": \"https://site.com/gift.html\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}:{{port}}/gift/9d2989cb-6533-4324-b079-99d941a69d68",
+							"host": [
+								"{{base_url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"gift",
+								"9d2989cb-6533-4324-b079-99d941a69d68"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Receive gift",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}:{{port}}/gift/9d2989cb-6533-4324-b079-99d941a69d68/receive",
+							"host": [
+								"{{base_url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"gift",
+								"9d2989cb-6533-4324-b079-99d941a69d68",
+								"receive"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove gift",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}:{{port}}/gift/c4b4a9e1-59ba-419f-a0e9-a9eabfa9257b",
+							"host": [
+								"{{base_url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"gift",
+								"c4b4a9e1-59ba-419f-a0e9-a9eabfa9257b"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
