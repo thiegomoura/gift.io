@@ -9,10 +9,10 @@
     "strict": true,
     "strictNullChecks": true,
     "skipLibCheck": true,
-    "baseUrl": "./",
+    "baseUrl": ".",
     "paths": {
       "@/*": [
-        "./src/*"
+        "src/*"
       ]
     }
   }
