@@ -1,5 +1,4 @@
-import { describe, expect } from '@jest/globals';
-import { User } from "./user"
+import { User } from "./user";
 
 describe('User', () => {
     it('should be able to create a user', () => {
