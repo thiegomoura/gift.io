@@ -1,4 +1,4 @@
-import { User } from "@prisma/client";
+import { User } from "../entities/user";
 import { UserRepository } from "../repositories/user-repository";
 
 interface FindUserRequest {

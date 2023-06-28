@@ -1,4 +1,4 @@
-export interface CreateUserBody {
+export interface ICreateUserBody {
     firstName: string;
     lastName: string;
     birthday: Date;

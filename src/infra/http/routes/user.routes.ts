@@ -1,18 +1,9 @@
-import { UserRepository } from "@/app/repositories/user-repository";
-import { PrismaUserRepository } from "@/infra/database/prisma/prisma-user-repository";
+import adaptHttp from "@/infra/adapters/http-json-adapter";
+import createUserControllerFactory from "@/infra/factories/http/create-user-controller-factory";
 import { Router } from "express";
-import { CreateUser } from "../../../app/use-cases/create-user";
-import { UserController } from "../controllers/user.controller";
 
 const userRouter = Router();
 
-const createUser = new CreateUser(
-  PrismaUserRepository as unknown as UserRepository
-);
-
-const user = new UserController(createUser);
-
-userRouter.get("/", () => "Hello");
-userRouter.post("/", user.create);
+userRouter.post("/", adaptHttp(createUserControllerFactory()));
 
 export default userRouter;
